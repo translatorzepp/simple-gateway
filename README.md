@@ -1,6 +1,8 @@
 ## Details & Dependencies
 Written with Ruby 2.3.1
+
 Additionally tested with Ruby 2.0.0 and 2.2.1
+
 Testing requires:
 - rspec 3.6.0
 
@@ -29,5 +31,5 @@ rspec spec/name_of_test_file.rb
 Finally, there is also a manual test file for menu.rb, which allows you to interactively test menu behavior. To use it, run
 
 ```
-ruby manual_menu-test.rb
+ruby manual_menu_test.rb
 ```
