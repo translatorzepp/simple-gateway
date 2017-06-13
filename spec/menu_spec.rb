@@ -1,12 +1,12 @@
 require "menu"
 
 class TestXYZ
-  def initialize()
+  def initialize
   end
-  def test_x()
+  def test_x
      puts "X test action has occurred!"
   end
-  def test_z()
+  def test_z
       puts "Z test action has occurred!"
   end
 end

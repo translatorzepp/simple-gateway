@@ -26,9 +26,10 @@ class Gateway
   # this way gateway has to know about transaction *and* transactionstore
   # make this a transaction method?
   # but if it's a transaction method, then transaction has to know about the interface
+  # could be a transaction_store method?
 
   def launch
-    @menu.display
+    @menu.display()
   end
 
 end

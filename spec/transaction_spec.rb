@@ -87,7 +87,7 @@ RSpec.describe TransactionStore do
   end
 
   it "outputs all transactions by merchant with summaries" do
-    summary = CSV.parse(@tstore.full_output_by_merchants)
+    summary = CSV.parse(@tstore.full_output_by_merchants())
     expect(summary[0]).to eq(["Athoek Station: 2 transactions totalling $63.63"])
     expect(summary[1]).to include("Athoek Station")
     expect(summary[2]).to include("Athoek Station")
@@ -101,7 +101,7 @@ RSpec.describe TransactionStore do
   end
 
   it "can be reset to delete all transactions" do
-    @tstore.reset
+    @tstore.reset()
     expect(@tstore.all_merchants.length).to eq(0)
     expect(@tstore.transaction_count).to eq(0)
     expect(@tstore.total_amount).to eq(0)

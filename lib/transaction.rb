@@ -72,7 +72,7 @@ class TransactionStore
     return merchant_transaction_store
   end
 
-  def full_output_by_merchants()
+  def full_output_by_merchants
     output = ""
     @all_merchants.each do | merch |
       mtstore = self.new_transaction_store_for_merchant(merch)

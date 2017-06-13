@@ -1,15 +1,15 @@
 require "./lib/menu"
 
 class TestXYZ
-  def initialize()
+  def initialize
   end
-  def test_x()
+  def test_x
      puts "X test action has occurred!"
   end
-  def test_z()
+  def test_z
       puts "Z test action has occurred!"
   end
-  def test_y()
+  def test_y
     puts "Y test action has occurred!"
   end
 end
@@ -32,4 +32,4 @@ test_menu_option_c2 = MenuOption.new("3", "This will take Action Y and exit the 
 test_menu_level_1.add_options([test_menu_option_a1, test_menu_option_b1, test_menu_option_c1, test_menu_option_d1])
 test_menu_level_2.add_options([test_menu_option_a2, test_menu_option_b2, test_menu_option_c2])
 
-test_menu_level_1.display
+test_menu_level_1.display()

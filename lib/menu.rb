@@ -12,11 +12,11 @@ class MenuOption
     #maybe make this so it doesn't have to be an object + a method?
   end
 
-  def output()
+  def output
     puts "#{@key}  #{@description}"
   end
 
-  def act()
+  def act
     @action_object.method(@action).call
   end
 
@@ -49,12 +49,12 @@ class Menu
         else
           @choice = ""
         end
-        chosen_option.act
+        chosen_option.act()
       else
         puts "\n#{@title}"
         puts "(enter '#{@exit_choice}' to exit)"
         @options_keys.each do | menu_option_key |
-          @options[menu_option_key].output
+          @options[menu_option_key].output()
         end
         @choice = gets.chomp
       end
