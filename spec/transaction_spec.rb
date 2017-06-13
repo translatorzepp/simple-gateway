@@ -45,7 +45,7 @@ RSpec.describe TransactionStore do
     expect(@tstore.all_merchants[3]).to eq("Seivarden")
   end
 
-  it "checks if an ID already exists" do
+  it "checks if it already contains a transaction with specified ID" do
     expect(@tstore.is_transaction_id_unique("id19")).to eq(false)
     expect(@tstore.is_transaction_id_unique("doesnotexist")).to eq(true)
   end

@@ -39,12 +39,12 @@ class TransactionStore
     new_id = transaction.public_id
     if is_transaction_id_unique(new_id)
       @transactions[new_id] = transaction
-      @total_amount = @total_amount + transaction.amount.to_f
+      @total_amount += transaction.amount.to_f
       @transaction_count += 1
       unless @all_merchants.include?(transaction.merchant_name)
         @all_merchants << transaction.merchant_name
+        @all_merchants.sort!
       end
-      @all_merchants.sort!
       # we could derive all this from traversing the hash with each, but this is faster
     else
       # return?
