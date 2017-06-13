@@ -33,6 +33,7 @@ RSpec.describe Menu do
 
   it "has options from initialization" do
     test_menu_options = @test_menu.instance_variable_get(:@options)
+    expect(test_menu_options["a"].class).to eq(@test_menu_option_a.class)
     expect(test_menu_options["a"].description).to eq("This will take Option Z")
   end
 

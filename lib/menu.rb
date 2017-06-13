@@ -45,7 +45,7 @@ class Menu
       if @options_keys.include? @choice
         chosen_option = @options[@choice]
         if chosen_option.exit_after
-          @choice = "q"
+          @choice = @exit_choice
         else
           @choice = ""
         end
@@ -67,18 +67,3 @@ class Menu
   #end
 
 end
-
-# menu:
-  # needs a title
-  # needs options
-  #   each option should have
-  #     a key: e.g. a number
-  #     a description: a text string
-  #     a method: what it does
-  #
-    #listen for choice
-    #case of every key in each menu_option
-    #if choice = case, call key's MenuOption's method
-    #alt: listen for choice
-    #for each option in the menu's options array,
-    # check if choice = option.key; if yes, return option.method
