@@ -1,0 +1,40 @@
+Coding Challenge Guidelines
+
+You should use the programming language you are most comfortable with to complete this exercise.
+
+Please include a README file that includes the version of your language and any required dependencies. 
+Example: “This program was written with Ruby 2.2.3.”
+
+Please include instructions on how to execute your program.
+Example: “To execute this program, run ruby my_cool_program.rb”
+
+Please include some way to test your program. “Test” in this case means “execute the program against a specific set of inputs to make sure that it returns a particular output.” These tests can be manually executed or automated, either is fine.
+Example: “To test this program, run ruby my_cool_program.rb, enter “Scott” for your name, and verify the output is Hello Scott.”
+
+Please package all files you have written for this exercise in a single archive. Virtually any format is fine, but a single .zip file is probably the most straightforward way.
+
+Be prepared to extend this problem during the pairing portion of your interview.
+This bit is important: please work on this independently. Feel free to search the internet for help, but otherwise you should write this code yourself without asking questions about the exercise to anyone except Lauren or Scott.
+
+
+Coding Challenge - Transaction Gateway
+
+Overview
+Imagine we are building a drastically simplified transaction gateway. Braintree’s actual gateway provides many different features to merchants, but this one will be used only to manually log the most basic information about transactions. Our users will love any interface you build as long as this gateway does two things:
+Stores transactions
+Displays a summary of all transactions by merchant.
+
+Specifications
+Your program should accept user input consisting of transactions that have the following three fields:
+ 
+Public ID - an alphanumeric unique identifier for the transaction. Example: “abc123”
+Merchant - a string that represents the merchant’s name. Example: “Amit’s Aardvark Adventures”
+Amount - An amount in USD for the transaction. A dollar sign is optional. Example: “501.22” or “$501.22”
+ 
+Once the user is done creating transactions, your program will output a summary. For each merchant, it will show all transactions for that merchant and a summary of the number of transactions and the total amount.
+
+Considerations
+You are free to choose how the user enters input. An HTML form is just as good as a command line prompt. The same goes for how you display output.
+You are free to choose how you store or do not store this data in your program. A database is just as good as storing transactions in a file or in memory.
+We aren’t looking for A+ graphic design, so please don’t feel the need to spend vast amounts of time on aesthetic 
+The user will choose how many transactions they enter. You shouldn’t limit how many transactions can be stored.
