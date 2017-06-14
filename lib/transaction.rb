@@ -95,15 +95,10 @@ class TransactionStore
     self.transactions.keys.each do | transaction_id |
       if transaction_id.downcase.include?(searchstring)
         search_results.add_transaction(self.transactions[transaction_id])
+      elsif transactions[transaction_id].merchant_name.downcase.include?(searchstring)
+        search_results.add_transaction(transactions[transaction_id])
       end
     end
-    #if self.all_merchants.include?(searchstring)
-    self.transactions.values.each do | transaction |
-      if transaction.merchant_name.downcase.include?(searchstring)
-        search_results.add_transaction(transaction)
-      end
-    end
-    #end
     return search_results
   end
 
