@@ -89,4 +89,22 @@ class TransactionStore
     @all_merchants = []
   end
 
+  def search(searchstring)
+    searchstring.downcase!
+    search_results = TransactionStore.new
+    self.transactions.keys.each do | transaction_id |
+      if transaction_id.downcase.include?(searchstring)
+        search_results.add_transaction(self.transactions[transaction_id])
+      end
+    end
+    #if self.all_merchants.include?(searchstring)
+    self.transactions.values.each do | transaction |
+      if transaction.merchant_name.downcase.include?(searchstring)
+        search_results.add_transaction(transaction)
+      end
+    end
+    #end
+    return search_results
+  end
+
 end

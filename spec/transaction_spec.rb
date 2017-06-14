@@ -108,4 +108,41 @@ RSpec.describe TransactionStore do
     expect(@tstore.transactions["id19"]).to be_nil
   end
 
+  it "creates a new transactionstore with all transactions whose id matches a search string" do
+    searchtstore = @tstore.search("id19")
+    expect(searchtstore.class).to eq(@tstore.class)
+    expect(searchtstore.transaction_count).to eq(1)
+  end
+
+  it "creates a new transactionstore with all transactions whose merchant name matches a search string" do
+    searchtstore = @tstore.search("JUSTICE OF tOREn")
+    expect(searchtstore.transaction_count).to eq(2)
+    expect(searchtstore.all_merchants.length).to eq(1)
+  end
+
+  it "returns partial matches on search results" do
+    @tstore.add_transaction(Transaction.new("variable", "a new merchant", "0"))
+    searchtstore = @tstore.search("var")
+    expect(searchtstore.transaction_count).to eq(2)
+  end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 end
