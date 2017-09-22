@@ -126,23 +126,4 @@ RSpec.describe TransactionStore do
     expect(searchtstore.transaction_count).to eq(2)
   end
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 end
